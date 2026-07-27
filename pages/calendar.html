@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>DevPortal</h2>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="../index.html">Dashboard</a></li>
+            <li><i class="fas fa-list-check"></i><a href="tasks.html">Tasks</a></li>
+            <li><i class="fas fa-toolbox"></i><a href="tools.html">Tools</a></li>
+            <li><i class="fas fa-book"></i><a href="docs.html">Documentation</a></li>
+            <li><i class="fas fa-users"></i><a href="team.html">Team</a></li>
+            <li><i class="fas fa-user"></i><a href="profile.html">Profile</a></li>
+            <li class="active"><i class="fas fa-calendar"></i><a href="calendar.html">Calendar</a></li>
+            <li><i class="fas fa-bell"></i><a href="announcements.html">Announcements</a></li>
+            <li><i class="fas fa-question-circle"></i><a href="help.html">Help</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <header>
+            <h1>Calendar</h1>
+            <p>Upcoming events and meetings</p>
+        </header>
+
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="events-list">
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">27</span>
+                    <span class="month">Jul</span>
+                </div>
+                <div class="event-info">
+                    <h3>Welcome Session</h3>
+                    <p>Welcome to the team orientation</p>
+                    <p class="time"><i class="fas fa-clock"></i> 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">28</span>
+                    <span class="month">Jul</span>
+                </div>
+                <div class="event-info">
+                    <h3>Meet Your Team</h3>
+                    <p>One-on-one meetings with team members</p>
+                    <p class="time"><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">31</span>
+                    <span class="month">Jul</span>
+                </div>
+                <div class="event-info">
+                    <h3>Project Overview</h3>
+                    <p>Introduction to current projects</p>
+                    <p class="time"><i class="fas fa-clock"></i> 11:00 AM - 12:30 PM</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">01</span>
+                    <span class="month">Aug</span>
+                </div>
+                <div class="event-info">
+                    <h3>Sprint Planning</h3>
+                    <p>First sprint planning meeting</p>
+                    <p class="time"><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

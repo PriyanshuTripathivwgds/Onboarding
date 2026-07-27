@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Onboarding Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>DevPortal</h2>
+        <ul>
+            <li class="active">
+                <i class="fas fa-home"></i>
+                <a href="index.html">Dashboard</a>
+            </li>
+            <li>
+                <i class="fas fa-list-check"></i>
+                <a href="pages/tasks.html">Tasks</a>
+            </li>
+            <li>
+                <i class="fas fa-toolbox"></i>
+                <a href="pages/tools.html">Tools</a>
+            </li>
+            <li>
+                <i class="fas fa-book"></i>
+                <a href="pages/docs.html">Documentation</a>
+            </li>
+            <li>
+                <i class="fas fa-users"></i>
+                <a href="pages/team.html">Team</a>
+            </li>
+            <li>
+                <i class="fas fa-user"></i>
+                <a href="pages/profile.html">Profile</a>
+            </li>
+            <li>
+                <i class="fas fa-calendar"></i>
+                <a href="pages/calendar.html">Calendar</a>
+            </li>
+            <li>
+                <i class="fas fa-bell"></i>
+                <a href="pages/announcements.html">Announcements</a>
+            </li>
+            <li>
+                <i class="fas fa-question-circle"></i>
+                <a href="pages/help.html">Help</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Welcome 👋</h1>
+                <p>Developer Onboarding Dashboard</p>
+            </div>
+            <div class="profile">
+                <img src="https://i.pravatar.cc/45" alt="Profile">
+                <span>Developer</span>
+            </div>
+        </header>
+
+        <!-- Progress Card -->
+        <section class="progress-card">
+            <div class="title">
+                <h2>Onboarding Progress</h2>
+                <span id="percent">65%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 65%"></div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline">
+            <h2>Journey</h2>
+            <div class="steps">
+                <div class="step complete">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Welcome</p>
+                </div>
+                <div class="step complete">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Account Setup</p>
+                </div>
+                <div class="step current">
+                    <i class="fas fa-spinner"></i>
+                    <p>Tool Access</p>
+                </div>
+                <div class="step">
+                    <i class="far fa-circle"></i>
+                    <p>Training</p>
+                </div>
+                <div class="step">
+                    <i class="far fa-circle"></i>
+                    <p>Go Live</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access Cards -->
+        <h2 class="section-title">Quick Access</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fab fa-jira"></i>
+                <h3>Jira</h3>
+                <p>Manage Stories</p>
+                <button class="btn btn-primary">Open</button>
+            </div>
+            <div class="card">
+                <i class="fab fa-bitbucket"></i>
+                <h3>Bitbucket</h3>
+                <p>Repositories</p>
+                <button class="btn btn-primary">Open</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Grafana</h3>
+                <p>Monitoring</p>
+                <button class="btn btn-primary">Open</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-book-open"></i>
+                <h3>Confluence</h3>
+                <p>Knowledge Base</p>
+                <button class="btn btn-primary">Open</button>
+            </div>
+        </div>
+
+        <!-- Bottom Grid -->
+        <div class="bottom-grid">
+            <div class="tasks">
+                <h2>Pending Tasks</h2>
+                <ul>
+                    <li>✔ Complete Security Training</li>
+                    <li>✔ Request VPN Access</li>
+                    <li>✔ Clone Repository</li>
+                    <li>✔ Meet Team Lead</li>
+                </ul>
+            </div>
+            <div class="announce">
+                <h2>Announcements</h2>
+                <p>🎉 Welcome to the Developer Team.</p>
+                <p>🚀 Sprint Planning - Monday 10 AM.</p>
+                <p>📢 Mandatory Security Training due Friday.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>DevPortal</h2>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="../index.html">Dashboard</a></li>
+            <li class="active"><i class="fas fa-list-check"></i><a href="tasks.html">Tasks</a></li>
+            <li><i class="fas fa-toolbox"></i><a href="tools.html">Tools</a></li>
+            <li><i class="fas fa-book"></i><a href="docs.html">Documentation</a></li>
+            <li><i class="fas fa-users"></i><a href="team.html">Team</a></li>
+            <li><i class="fas fa-user"></i><a href="profile.html">Profile</a></li>
+            <li><i class="fas fa-calendar"></i><a href="calendar.html">Calendar</a></li>
+            <li><i class="fas fa-bell"></i><a href="announcements.html">Announcements</a></li>
+            <li><i class="fas fa-question-circle"></i><a href="help.html">Help</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <header>
+            <div>
+                <h1>My Onboarding Tasks</h1>
+                <p>Complete all tasks before your first sprint.</p>
+            </div>
+        </header>
+
+        <!-- Progress Card -->
+        <div class="progress-card">
+            <div class="title">
+                <h2>Completion</h2>
+                <span id="percent">0%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" id="taskProgress" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Task Checklist -->
+        <div class="tasks-table">
+            <h2>Checklist</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Done</th>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" checked></td>
+                        <td>Complete Security Training</td>
+                        <td><span class="badge high">High</span></td>
+                        <td>2026-08-01</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" checked></td>
+                        <td>Request VPN Access</td>
+                        <td><span class="badge high">High</span></td>
+                        <td>2026-08-01</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Clone Repository</td>
+                        <td><span class="badge medium">Medium</span></td>
+                        <td>2026-08-05</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Meet Team Lead</td>
+                        <td><span class="badge medium">Medium</span></td>
+                        <td>2026-08-03</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Setup Development Environment</td>
+                        <td><span class="badge high">High</span></td>
+                        <td>2026-08-05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
