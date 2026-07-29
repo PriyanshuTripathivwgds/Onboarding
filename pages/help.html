@@ -35,10 +35,56 @@
 
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-container">
+
             <div class="faq-item">
-                <h3>How do I reset my password?</h3>
-                <p>You can reset your password by clicking the "Forgot Password" link on the login page. Check your email for the reset link.</p>
+                <h3>1. What is ZPA?</h3>
+                <p>ZPA (Zeichnungsprüfung Automation) is an automated drawing inspection system that analyzes engineering drawings and validates them against VW standards and KVS data. It helps identify errors and compliance issues before release.</p>
             </div>
+
+            <div class="faq-item">
+                <h3>2. What file formats are supported?</h3>
+                <p><strong>Supported formats:</strong></p>
+                <ul>
+                    <li>PDF (single-page and multi-page)</li>
+                    <li>TIFF (single-page and multi-page)</li>
+                </ul>
+                <p><strong>Not supported:</strong></p>
+                <ul>
+                    <li>JPG, PNG, BMP, GIF</li>
+                    <li>Word documents, Excel files</li>
+                    <li>Native CAD files</li>
+                </ul>
+                <p>CAD files should be exported to PDF or TIFF before processing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>3. How does ZPA work?</h3>
+                <p>The process includes:</p>
+                <ol>
+                    <li>User submits a drawing.</li>
+                    <li>ZPA creates a processing task.</li>
+                    <li>KVS data is retrieved.</li>
+                    <li>Drawing is processed.</li>
+                    <li>OCR extracts information.</li>
+                    <li>Validation rules are executed.</li>
+                    <li>Results are aggregated.</li>
+                    <li>Inspection report is generated.</li>
+                </ol>
+            </div>
+
+            <div class="faq-item">
+                <h3>4. What statuses can an inspection have?</h3>
+                <p><strong>Common statuses:</strong></p>
+                <ul>
+                    <li><code>CREATED</code></li>
+                    <li><code>SCHEDULED</code></li>
+                    <li><code>RUNNING</code></li>
+                    <li><code>COMPLETE</code></li>
+                    <li><code>FAILED</code></li>
+                </ul>
+                <p>Users can monitor the current status through the dashboard.</p>
+            </div>
+
             <div class="faq-item">
                 <h3>Where can I find project documentation?</h3>
                 <p>All project documentation is available in the Documentation section. You can also access it through Confluence.</p>
@@ -52,12 +98,8 @@
                 <p>First, check the Troubleshooting section in the documentation. If you can't find a solution, reach out to your team lead or IT support.</p>
             </div>
             <div class="faq-item">
-                <h3>How often should I update my profile?</h3>
-                <p>Keep your profile updated with your latest skills and contact information. Update it whenever you take on new responsibilities.</p>
-            </div>
-            <div class="faq-item">
                 <h3>Where can I find meeting notes and updates?</h3>
-                <p>Meeting notes and team updates are posted in Confluence and shared through announcements on this portal.</p>
+                <p>Meeting notes and team updates are posted in Confluence.</p>
             </div>
         </div>
 
