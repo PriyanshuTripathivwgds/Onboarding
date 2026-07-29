@@ -1,26 +1,25 @@
-# Developer Onboarding Portal
+# ZPA Onboarding Portal
 
-A comprehensive web-based onboarding portal for new developers with modern UI and full feature set.
+An interactive web-based onboarding portal for new team members with role-based content, progress tracking, and comprehensive resource management.
 
 ## ✨ Features
 
-- 📊 **Dashboard** - Progress tracking and overview
-- ✅ **Task Management** - Interactive task checklist
-- 🛠️ **Tools** - Development resources access
-- 📚 **Documentation** - Knowledge base
-- 👥 **Team Directory** - Team member profiles
-- 👤 **User Profile** - Personal information
-- 📅 **Calendar** - Events and meetings
-- 🔔 **Announcements** - News and updates
-- 💬 **Help & Support** - FAQ and support
+- 📊 **Dashboard** - Role-based interactive dashboard with Developer/DevOps toggle
+- 🎯 **Team Member Onboarding Checklist** - Comprehensive 6-section checklist (COCOA, Monitoring, ZPA WebUI, OCP Openshift, KVS, SC3)
+- ✅ **Task Management** - Interactive task checklist for onboarding tasks
+- 🛠️ **Tools** - Development resources and required tools
+- 📚 **Documentation** - Confluence-linked resource guides
+- 👥 **Team Directory** - Team member roster with roles and contact info
+- 💬 **Help & Support** - Support resources and FAQ
 - 🌙 **Dark Mode** - Theme support
+- 💾 **Progress Persistence** - localStorage-based state management
 
 ## 🚀 Quick Start
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Developer-Onboarding.git
-cd Developer-Onboarding
+git clone https://github.com/yourusername/ZPA-Onboarding.git
+cd Onboarding
 ```
 
 2. Open in browser:
@@ -35,36 +34,31 @@ open index.html
 xdg-open index.html
 ```
 
+3. **Role Toggle** - Switch between Developer and DevOps roles on the main dashboard to see role-specific onboarding content. Your selection is saved automatically.
+
 ## 📁 Project Structure
 
 ```
-Developer-Onboarding/
+Onboarding/
 ├── login.html              # Login page
-├── index.html              # Main dashboard
+├── index.html              # Main dashboard with role toggle
 ├── pages/                  # Sub pages
 │   ├── dashboard.html
-│   ├── tasks.html
-│   ├── tools.html
-│   ├── docs.html
-│   ├── team.html
-│   ├── profile.html
-│   ├── calendar.html
-│   ├── announcements.html
-│   └── help.html
+│   ├── tasks.html          # Onboarding tasks
+│   ├── tools.html          # Required tools
+│   ├── docs.html           # Documentation links
+│   ├── team.html           # Team roster
+│   └── help.html           # Help & support
 ├── css/                    # Stylesheets
 │   ├── style.css           # Global styles
 │   ├── dashboard.css       # Dashboard styles
 │   ├── components.css      # Components
 │   └── dark.css            # Dark theme
 ├── js/                     # JavaScript
-│   ├── script.js           # Main app
+│   ├── script.js           # Main app & role toggle
 │   ├── dashboard.js        # Dashboard logic
 │   ├── charts.js           # Charts
 │   └── theme.js            # Theme management
-├── assets/                 # Static files
-│   ├── images/
-│   ├── icons/
-│   └── logo.png
 └── README.md
 ```
 
@@ -82,24 +76,4 @@ Developer-Onboarding/
 - Safari (latest)
 - Edge (latest)
 
-## 🚀 Deployment
 
-### GitHub Pages
-1. Push to GitHub
-2. Settings → Pages → Select main branch
-3. Access at `https://yourusername.github.io/Developer-Onboarding`
-
-### Vercel / Netlify
-- Connect GitHub repository for auto-deployment
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👨‍💻 Contributing
-
-Contributions welcome! Fork, create feature branch, commit, and submit PR.
-
-## 📞 Support
-
-For issues or questions, create an issue on GitHub or check the Help section in the app.
