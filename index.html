@@ -34,18 +34,6 @@
                 <a href="pages/team.html">Team</a>
             </li>
             <li>
-                <i class="fas fa-user"></i>
-                <a href="pages/profile.html">Profile</a>
-            </li>
-            <li>
-                <i class="fas fa-calendar"></i>
-                <a href="pages/calendar.html">Calendar</a>
-            </li>
-            <li>
-                <i class="fas fa-bell"></i>
-                <a href="pages/announcements.html">Announcements</a>
-            </li>
-            <li>
                 <i class="fas fa-question-circle"></i>
                 <a href="pages/help.html">Help</a>
             </li>
@@ -58,101 +46,449 @@
         <header>
             <div>
                 <h1>Welcome 👋</h1>
-                <p>Developer Onboarding Dashboard</p>
+                <p id="headerSubtitle">Developer Onboarding Dashboard</p>
             </div>
-            <div class="profile">
-                <img src="https://i.pravatar.cc/45" alt="Profile">
-                <span>Developer</span>
+            <div class="header-controls">
+                <div class="toggle-container">
+                    <span class="toggle-label">Developer</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="roleToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">DevOps</span>
+                </div>
+                <div class="profile">
+                    <img src="https://i.pravatar.cc/45" alt="Profile">
+                    <span id="roleName">Developer</span>
+                </div>
             </div>
         </header>
 
-        <!-- Progress Card -->
-        <section class="progress-card">
-            <div class="title">
-                <h2>Onboarding Progress</h2>
-                <span id="percent">65%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width: 65%"></div>
-            </div>
-        </section>
+        <!-- Developer Section -->
+        <div id="developer-section" class="role-section">
+            <!-- Timeline -->
+            <section class="timeline">
+                <h2>Journey</h2>
+                <div class="steps">
+                    <div class="step complete" data-step="welcome" data-status="complete">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Welcome</p>
+                    </div>
+                    <div class="step complete" data-step="account-setup" data-status="complete">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Account Setup</p>
+                    </div>
+                    <div class="step current" data-step="tool-access" data-status="current">
+                        <i class="fas fa-spinner"></i>
+                        <p>Tool Access</p>
+                    </div>
+                    <div class="step" data-step="training" data-status="pending">
+                        <i class="far fa-circle"></i>
+                        <p>Training</p>
+                    </div>
+                    <div class="step" data-step="go-live" data-status="pending">
+                        <i class="far fa-circle"></i>
+                        <p>Go Live</p>
+                    </div>
+                </div>
+                <p class="step-info">Click on any step to mark it as complete or in progress</p>
+            </section>
 
-        <!-- Timeline -->
-        <section class="timeline">
-            <h2>Journey</h2>
-            <div class="steps">
-                <div class="step complete">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Welcome</p>
+            <!-- Progress Card -->
+            <section class="progress-card">
+                <div class="title">
+                    <h2>Onboarding Progress</h2>
+                    <span id="percent">65%</span>
                 </div>
-                <div class="step complete">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Account Setup</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 65%"></div>
                 </div>
-                <div class="step current">
-                    <i class="fas fa-spinner"></i>
-                    <p>Tool Access</p>
-                </div>
-                <div class="step">
-                    <i class="far fa-circle"></i>
-                    <p>Training</p>
-                </div>
-                <div class="step">
-                    <i class="far fa-circle"></i>
-                    <p>Go Live</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Quick Access Cards -->
-        <h2 class="section-title">Quick Access</h2>
-        <div class="cards">
-            <div class="card">
-                <i class="fab fa-jira"></i>
-                <h3>Jira</h3>
-                <p>Manage Stories</p>
-                <button class="btn btn-primary">Open</button>
-            </div>
-            <div class="card">
-                <i class="fab fa-bitbucket"></i>
-                <h3>Bitbucket</h3>
-                <p>Repositories</p>
-                <button class="btn btn-primary">Open</button>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Grafana</h3>
-                <p>Monitoring</p>
-                <button class="btn btn-primary">Open</button>
-            </div>
-            <div class="card">
-                <i class="fas fa-book-open"></i>
-                <h3>Confluence</h3>
-                <p>Knowledge Base</p>
-                <button class="btn btn-primary">Open</button>
-            </div>
+            <!-- Common Checklist -->
+            <section class="devops-content">
+                <h2 class="section-title">Team Member Onboarding Checklist</h2>
+
+                <!-- COCOA Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-cog"></i>
+                        <h3>COCOA</h3>
+                    </div>
+                    <p class="section-requirement">The new user needs to be added in user group: <strong>cgm-ki2te-zpa-developers</strong></p>
+                    <div class="links-group">
+                        <a href="https://devstack.vwgroup.com/bitbucket/projects/KI2TE/repos/zpa/browse" target="_blank" class="checklist-link">
+                            <i class="fas fa-code-branch"></i>
+                            <span>BitBucket - KI-Quadrat in der TE / ZPA</span>
+                        </a>
+                        <a href="https://devstack.vwgroup.com/bamboo/project/viewProjectPlans.action?projectKey=ZPA" target="_blank" class="checklist-link">
+                            <i class="fas fa-hammer"></i>
+                            <span>Bamboo - ZPA Project Summary</span>
+                        </a>
+                        <a href="https://devstack.vwgroup.com/confluence/display/KI2TE/%28ZP%29+Roles+and+Rights+Concept" target="_blank" class="checklist-link">
+                            <i class="fas fa-book"></i>
+                            <span>Confluence - Roles and Rights Concept</span>
+                        </a>
+                        <a href="https://devstack.vwgroup.com/jira/secure/RapidBoard.jspa?rapidView=17622" target="_blank" class="checklist-link">
+                            <i class="fas fa-tasks"></i>
+                            <span>Jira - Zeichnungsprüfung Agile Board</span>
+                        </a>
+                        <a href="https://jfrog.devstack.vwgroup.com/ui/repos/tree/General/ki2te-docker/zpa" target="_blank" class="checklist-link">
+                            <i class="fas fa-cube"></i>
+                            <span>JFrog - ZPA Artifactory</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Monitoring Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoring</h3>
+                    </div>
+                    <p class="section-requirement">The new user needs the KIRA right</p>
+                    <div class="links-group">
+                        <a href="https://gep-grafana-prod.prod-intranet-02.wob.vw.vwg/grafana/d/fep4ond6fxo8wd/zpa-business-dashboard?orgId=7&from=now-15h&to=now&timezone=utc" target="_blank" class="checklist-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Grafana - ZPA Business Dashboard</span>
+                        </a>
+                        <a href="https://zpa-dev.kb.mlaas-b.mls-ml.prd.eu.gs.aws.cloud.vwgroup.com/app/dashboards#/view/ffc3a021-4433-42c0-a9ff-112e1bd67f6a?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-24h%2Fh,to:now))" target="_blank" class="checklist-link">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Kibana - Errors Dashboard</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ZPA WebUI Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>ZPA WebUI</h3>
+                    </div>
+                    <p class="section-requirement">The new user needs the KIRA right</p>
+                    <div class="links-group">
+                        <a href="https://web-zpa-prod.apps.prod-intranet-02-wob.ocp.vwgroup.com/login" target="_blank" class="checklist-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>ZPA Production - Zeichnungsprüfung</span>
+                        </a>
+                        <a href="https://web-zpa-qa.apps.prod-intranet-02-wob.ocp.vwgroup.com/login" target="_blank" class="checklist-link">
+                            <i class="fas fa-flask"></i>
+                            <span>ZPA QA - Zeichnungsprüfung</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- OCP Openshift Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-server"></i>
+                        <h3>OCP Openshift</h3>
+                    </div>
+                    <div class="links-group">
+                        <a href="https://console.apps.prod-intranet-02-wob.ocp.vwgroup.com/dev-monitoring/ns/zpa-qa?dashboard=grafana-dashboard-k8s-resources-namespace" target="_blank" class="checklist-link">
+                            <i class="fas fa-flask"></i>
+                            <span>ZPA QA - Observe</span>
+                        </a>
+                        <a href="https://console.apps.dev-intranet-02-wob.ocp.vwgroup.com/dev-monitoring/ns/zpa-dev?dashboard=grafana-dashboard-k8s-resources-namespace" target="_blank" class="checklist-link">
+                            <i class="fas fa-wrench"></i>
+                            <span>ZPA Dev - Observe</span>
+                        </a>
+                        <a href="https://console.apps.prod-intranet-02-wob.ocp.vwgroup.com/dev-monitoring/ns/zpa-prod?dashboard=grafana-dashboard-k8s-resources-namespace" target="_blank" class="checklist-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>ZPA Prod - Observe</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KVS Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-database"></i>
+                        <h3>KVS (HyperKVS)</h3>
+                    </div>
+                    <p class="section-info">To get access to KVS, refer to the granting of rights link below</p>
+                    <div class="links-group">
+                        <a href="https://kvs.wob.vw.vwg:8081/DE-script/webagent/DE/menu.html" target="_blank" class="checklist-link">
+                            <i class="fas fa-cube"></i>
+                            <span>P-Stage (HyperKVS_P)</span>
+                        </a>
+                        <a href="https://lxf201p292.wob.vw.vwg:3334/DE-script/webagent/DE/menu.html" target="_blank" class="checklist-link">
+                            <i class="fas fa-cube"></i>
+                            <span>Q-Stage (HyperKVS_Q)</span>
+                        </a>
+                        <a href="https://kvsdev10.wob.vw.vwg:40001/DE-script/webagent/DE/menu.html" target="_blank" class="checklist-link">
+                            <i class="fas fa-cube"></i>
+                            <span>T-Stage (HyperKVS_T)</span>
+                        </a>
+                        <a href="https://devstack.vwgroup.com/confluence/display/KI2TE/%28ZP%29+Granting+of+rights" target="_blank" class="checklist-link">
+                            <i class="fas fa-key"></i>
+                            <span>Granting of Rights - KI-Quadrat in der TE</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SC3 Section -->
+                <div class="checklist-section">
+                    <div class="section-header">
+                        <i class="fas fa-support"></i>
+                        <h3>SC3 & Code Quality</h3>
+                    </div>
+                    <p class="section-info">ASM creates request for the new user to get SC3 operator access to be added into ZPA SC3 support team</p>
+                    <div class="links-group">
+                        <a href="https://myserveprod.service-now.com/myserve?id=sc_cat_item&table=sc_cat_item&sys_id=88e77a6fffe50810ac0aecaf435b5ea1&searchTerm=SC3%20Operator" target="_blank" class="checklist-link">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span>MyServe - SC3 Operator Access Request</span>
+                        </a>
+                        <a href="https://devstack.vwgroup.com/sonar/dashboard?branch=develop&id=ZPA%3AZPA" target="_blank" class="checklist-link">
+                            <i class="fas fa-code"></i>
+                            <span>SonarQube - ZPA Overview</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <!-- Bottom Grid -->
-        <div class="bottom-grid">
-            <div class="tasks">
-                <h2>Pending Tasks</h2>
-                <ul>
-                    <li>✔ Complete Security Training</li>
-                    <li>✔ Request VPN Access</li>
-                    <li>✔ Clone Repository</li>
-                    <li>✔ Meet Team Lead</li>
-                </ul>
-            </div>
-            <div class="announce">
-                <h2>Announcements</h2>
-                <p>🎉 Welcome to the Developer Team.</p>
-                <p>🚀 Sprint Planning - Monday 10 AM.</p>
-                <p>📢 Mandatory Security Training due Friday.</p>
-            </div>
+        <!-- DevOps Section -->
+        <div id="devops-section" class="role-section" style="display: none;">
+            <section class="devops-content">
+                <!-- DevOps Only Section -->
+                <div class="devops-only-section">
+                    <h2><i class="fas fa-shield-alt"></i> Only for DevOps Engineer</h2>
+
+                    <!-- BlackDuckHub Section -->
+                    <div class="checklist-section">
+                        <div class="section-header">
+                            <i class="fas fa-lock"></i>
+                            <h3>BlackDuckHub</h3>
+                        </div>
+                        <p class="section-info">Complete all onboarding content. After completion, ASM will apply permissions via MyServe for the user.</p>
+                        <div class="links-group">
+                            <a href="https://volkswagengroup.sharepoint.com/sites/BlackDuckHubInbetriebnahme/SitePages/Black-Duck-Hub-Onboarding-2.0-EN.aspx" target="_blank" class="checklist-link">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Online Onboarding Training</span>
+                            </a>
+                            <a href="https://bdh.aws.cloud.vwgroup.com/api/search/project-versions?limit=100&offset=0&q=ZPA" target="_blank" class="checklist-link">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>ZPA Project</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- DMS Section -->
+                    <div class="checklist-section">
+                        <div class="section-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>DMS</h3>
+                        </div>
+                        <p class="section-info">Document Management System</p>
+                        <div class="links-group">
+                            <a href="https://vwdmsweb.wob.vw.vwg/groupdms/?docbase=vwdms&locateId=0b0045159a8bbebe" target="_blank" class="checklist-link">
+                                <i class="fas fa-link"></i>
+                                <span>Access DMS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- FOSS Section -->
+                    <div class="checklist-section">
+                        <div class="section-header">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>FOSS</h3>
+                        </div>
+                        <p class="section-info">Free and Open Source Software</p>
+                        <div class="links-group">
+                            <a href="https://devstack.vwgroup.com/jira/servicedesk/customer/portal/105" target="_blank" class="checklist-link">
+                                <i class="fas fa-headset"></i>
+                                <span>Service Desk</span>
+                            </a>
+                            <a href="https://volkswagen-net.de/wikis/spaces/FOSSVW/pages/6755520244/Home+Page+FOSS+EN" target="_blank" class="checklist-link">
+                                <i class="fas fa-book"></i>
+                                <span>FOSS Wiki</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- GOLF Section -->
+                    <div class="checklist-section">
+                        <div class="section-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>GOLF</h3>
+                        </div>
+                        <p class="section-info">IT Infrastructure</p>
+                        <div class="links-group">
+                            <a href="https://volkswagen-net.de/wikis/pages/viewpage.action?pageId=5085038790" target="_blank" class="checklist-link">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Getting Started - IT Infrastructure Guide</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ArgoCD Section -->
+                    <div class="checklist-section">
+                        <div class="section-header">
+                            <i class="fas fa-rocket"></i>
+                            <h3>ArgoCD</h3>
+                        </div>
+                        <p class="section-info">Continuous Deployment</p>
+                        <div class="links-group">
+                            <a href="https://argocd-gep-nonprod.apps.dev-intranet-02-wob.ocp.vwgroup.com/applications?showFavorites=false" target="_blank" class="checklist-link">
+                                <i class="fas fa-cube"></i>
+                                <span>ZPA Dev</span>
+                            </a>
+                            <a href="https://argocd-gep-nonprod.apps.prod-intranet-02-wob.ocp.vwgroup.com/applications?showFavorites=false" target="_blank" class="checklist-link">
+                                <i class="fas fa-cube"></i>
+                                <span>ZPA QA</span>
+                            </a>
+                            <a href="https://argocd-gep-prod.apps.prod-intranet-02-wob.ocp.vwgroup.com/applications?showFavorites=false" target="_blank" class="checklist-link">
+                                <i class="fas fa-cube"></i>
+                                <span>ZPA Prod</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        // Toggle functionality
+        document.getElementById('roleToggle').addEventListener('change', function() {
+            const isDeveloper = !this.checked;
+            const developerSection = document.getElementById('developer-section');
+            const devopsSection = document.getElementById('devops-section');
+            const headerSubtitle = document.getElementById('headerSubtitle');
+            const roleName = document.getElementById('roleName');
+            
+            if (isDeveloper) {
+                developerSection.style.display = 'block';
+                devopsSection.style.display = 'none';
+                headerSubtitle.textContent = 'Developer Onboarding Dashboard';
+                roleName.textContent = 'Developer';
+                localStorage.setItem('userRole', 'developer');
+            } else {
+                developerSection.style.display = 'none';
+                devopsSection.style.display = 'block';
+                headerSubtitle.textContent = 'DevOps Engineer Onboarding Dashboard';
+                roleName.textContent = 'DevOps Engineer';
+                localStorage.setItem('userRole', 'devops');
+            }
+        });
+
+        // Load user's saved role preference
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedRole = localStorage.getItem('userRole') || 'developer';
+            const toggle = document.getElementById('roleToggle');
+            if (savedRole === 'devops') {
+                toggle.checked = true;
+                toggle.dispatchEvent(new Event('change'));
+            }
+            
+            // Initialize step tracking after a small delay to ensure DOM is ready
+            setTimeout(function() {
+                initializeSteps();
+            }, 100);
+        });
+
+        // Step interaction functionality
+        function initializeSteps() {
+            const steps = document.querySelectorAll('.step');
+            
+            // Attach click listeners to each step
+            steps.forEach(function(step) {
+                step.style.cursor = 'pointer';
+                
+                step.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    const currentStatus = this.getAttribute('data-status');
+                    const stepName = this.getAttribute('data-step');
+                    let newStatus;
+                    
+                    // Cycle through statuses: pending -> current -> complete -> pending
+                    if (currentStatus === 'pending') {
+                        newStatus = 'current';
+                    } else if (currentStatus === 'current') {
+                        newStatus = 'complete';
+                    } else if (currentStatus === 'complete') {
+                        newStatus = 'pending';
+                    }
+                    
+                    updateStepStatus(this, newStatus);
+                    saveStepStatus(stepName, newStatus);
+                    updateProgress();
+                });
+            });
+            
+            // Load saved step statuses and calculate initial progress
+            loadSavedSteps();
+            updateProgress();
+        }
+
+        function updateStepStatus(stepElement, newStatus) {
+            const icon = stepElement.querySelector('i');
+            
+            if (!icon) return;
+            
+            // Remove previous classes
+            stepElement.classList.remove('complete', 'current', 'pending');
+            
+            // Update attribute
+            stepElement.setAttribute('data-status', newStatus);
+            
+            // Update classes and icon based on new status
+            if (newStatus === 'complete') {
+                stepElement.classList.add('complete');
+                icon.className = 'fas fa-check-circle';
+            } else if (newStatus === 'current') {
+                stepElement.classList.add('current');
+                icon.className = 'fas fa-spinner';
+            } else { // pending
+                icon.className = 'far fa-circle';
+            }
+        }
+
+        function updateProgress() {
+            const steps = document.querySelectorAll('.step');
+            let completedCount = 0;
+            
+            steps.forEach(function(step) {
+                if (step.getAttribute('data-status') === 'complete') {
+                    completedCount++;
+                }
+            });
+            
+            const total = steps.length;
+            const progress = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+            
+            const percentElement = document.getElementById('percent');
+            const progressBar = document.querySelector('.progress-bar');
+            
+            if (percentElement) {
+                percentElement.textContent = progress + '%';
+            }
+            if (progressBar) {
+                progressBar.style.width = progress + '%';
+            }
+        }
+
+        function saveStepStatus(stepName, status) {
+            const stepStatus = JSON.parse(localStorage.getItem('stepStatus') || '{}');
+            stepStatus[stepName] = status;
+            localStorage.setItem('stepStatus', JSON.stringify(stepStatus));
+        }
+
+        function loadSavedSteps() {
+            const stepStatus = JSON.parse(localStorage.getItem('stepStatus') || '{}');
+            const steps = document.querySelectorAll('.step');
+            
+            steps.forEach(function(step) {
+                const stepName = step.getAttribute('data-step');
+                if (stepStatus[stepName]) {
+                    updateStepStatus(step, stepStatus[stepName]);
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -193,6 +193,20 @@ header p {
 .step {
     text-align: center;
     flex: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+.step-info {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 15px;
+    font-style: italic;
 }
 
 .step i {
@@ -288,4 +302,320 @@ header p {
 
 .login-container button:hover {
     background: #1d4ed8;
+}
+
+/* Header Controls */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Toggle Switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.toggle-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    min-width: 70px;
+    text-align: center;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2563eb;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Role Sections */
+.role-section {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* DevOps Content */
+.devops-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.checklist-header {
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.checklist-header h2 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.checklist-info {
+    color: #999;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Checklist Sections */
+.checklist-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.checklist-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.section-header i {
+    font-size: 22px;
+    color: #2563eb;
+    width: 28px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin: 0;
+}
+
+.section-requirement,
+.section-info {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding: 10px 12px;
+    background: #f8f9fa;
+    border-left: 3px solid #2563eb;
+    border-radius: 4px;
+}
+
+.section-requirement strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Links Group */
+.links-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.checklist-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2563eb;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checklist-link:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border-color: #2563eb;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.checklist-link i {
+    font-size: 16px;
+    min-width: 16px;
+    text-align: center;
+}
+
+/* DevOps Only Section */
+.devops-only-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 3px dashed #fbbf24;
+    background: linear-gradient(to bottom, rgba(251, 191, 36, 0.03) 0%, transparent 100%);
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.devops-only-section h2 {
+    font-size: 24px;
+    color: #b45309;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.devops-only-section h2 i {
+    font-size: 28px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid #2563eb;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+}
+
+.team-avatar.team-lead {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.team-avatar.devops {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.team-avatar.tech-lead {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.team-avatar.data-science {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.team-card h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.emp-id {
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.serial-no {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.team-card .role {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 12px 0;
+    line-height: 1.4;
+}
+
+.team-card .email {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.team-card .email a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.team-card .email a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
 }
